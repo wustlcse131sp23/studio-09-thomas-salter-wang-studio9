@@ -16,12 +16,25 @@ public class NameToHeight {
 	 * returns null), break from the loop. Otherwise, loop up the name in the map
 	 * and output the results. Be sure to handle the case where the map does not
 	 * contain a specified name.
+
 	 */
+	
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
 
-		// FIXME
-		throw new NotYetImplementedException();
-
+		Map <String, Integer> nameToHeight = new HashMap<String, Integer>();
+		nameToHeight.put("lilly", 67);
+		nameToHeight.put("rita", 64);
+		nameToHeight.put("laila", 65);
+		nameToHeight.put("diego", 63);
+		
+		String name=" ";
+		
+		while (name != "quit") {
+		System.out.println("Input a name");
+		name = in.next();
+		int height = nameToHeight.get(name);
+		System.out.println(name+" " + height);
+		}
 	}
 }
